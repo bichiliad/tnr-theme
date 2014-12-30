@@ -112,8 +112,8 @@ body {
 .post img.attachment-post-thumbnail { float: left; margin: 0 2em 2em 0; padding: 0; }
 .post img, .post object, .post embed { display: block; margin: 0 auto 0.8em auto; }
 .post img { width: 100%; height: auto; }
-.post .number-of-comments a:link, .post .number-of-comments a:visited { color: #CCC }
-.post .number-of-comments a:hover, .post .number-of-comments a:active, .post .number-of-comments a:focus { color: #CCC }
+.post .number-of-comments a:link, .post .number-of-comments a:visited { color: #ccc; }
+.post .number-of-comments a:hover, .post .number-of-comments a:active, .post .number-of-comments a:focus { color: #ccc; }
 .post .vvqbox { margin: 2em auto; }
 .post .date { color: #ccc; font-size: 12px; display: block; margin-top: 1em; }
 .post .date a, .post .date a:link, .post .date a:visited { color: #ccc; }
@@ -124,8 +124,8 @@ body {
 .post h2 a:hover, .post h2 a:active, .post h2 a:focus { color: #3A525C; }
 .post h2 { font-size: 22px; line-height: 120%; font-weight: normal; }
 .post h3 { color: #ccc; margin: 0 0 1em 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; line-height: 120%; }
-.post h4 { color: #CCC; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
-.post h5 { color: #CCC;  font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
+.post h4 { color: #ccc; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
+.post h5 { color: #ccc;  font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
 .post blockquote cite { font-style: normal; }
 .post .number-of-comments a { text-decoration: underline; font-size: 13px; }
 #comments { font-size: 13px; }
@@ -134,8 +134,8 @@ body {
 .post blockquote { color: #fff; background: #878787; margin: 2em; padding: .1em 1.5em; position: relative; }
 .post blockquote cite { display: block; text-align: right; }
 
-.entry a:link, .comment a:link { color: #CCC }
-.entry a:visited, .comment a:visited { color: #CCC }
+.entry a:link, .comment a:link { color: #ccc; }
+.entry a:visited, .comment a:visited { color: #ccc; }
 .entry a:hover, .entry a:active, .entry a:focus, .comment a:hover, .comment a:active, .comment a:focus { color: #3A525C; }
 .entry .more-link { font-size: 12px; }
 
@@ -146,7 +146,7 @@ body {
 
 #commentform { background: #fff; margin: 2.3em 0 4.6em 0; padding: 0; }
 #commentform a:link, #commentform a:visited { color: #3A525C; }
-#commentform a:hover, #commentform a:active, #commentform a:focus { color: #CCC; }
+#commentform a:hover, #commentform a:active, #commentform a:focus { color: #ccc; }
 .comment { padding: 1.8em 1.6em; position: relative; overflow: hidden; border: 1px solid #f0f0f0; }
 .comment .date { bottom: 1em; position: absolute; right: 1em; }
 #comments h3 { margin: 0 0 2em 0; font-size: 18px; }
@@ -154,38 +154,38 @@ body {
 #commentform p { font-size: 13px }
 .comment cite { font-style: normal; }
 .comment cite a { text-decoration: underline; }
-#comments h3, #commentform h3 { color: #CCC }
+#comments h3, #commentform h3 { color: #ccc; }
 .highlighted { border: 1px solid #f0f0f0;  }
 .highlighted a:link, .highlighted a:visited { color: #09C }
-.comment cite { color: #CCC }
+.comment cite { color: #ccc; }
 .comment .moderation { color: #fff }
 
-.pagination { color: #CCC; margin: -2.6em 0 4.6em 0; }
+.pagination { color: #ccc; margin: -2.6em 0 4.6em 0; }
 .pagination div { float: left; margin: 0 2em 0 0; }
 .pagination a { text-decoration: underline;}
-.pagination a:link, .pagination a:visited { color: #CCC; }
+.pagination a:link, .pagination a:visited { color: #ccc; }
 .pagination a:hover, .pagination a:active, .pagination a:focus { color: #999; }
 
 
 #sb-1 { float: left; width: 45%; }
 #sb-2 { float: right; width: 45%; }
 
-#sidebar { font-size: 13px; color: #828282; padding: 0 0 7em 0; margin: 4em 0 0 0; }
+#sidebar { font-size: 13px; color: #878787; padding: 0 0 7em 0; margin: 4em 0 0 0; }
 #sidebar a { text-decoration: none; }
 #sidebar a:link, #sidebar a:visited { color: #C4C4C4; }
 #sidebar a:hover, #sidebar a:active, #sidebar a:focus { color: #ccc; }
 #sidebar #sb-2 a:link, #sidebar #sb-2 a:visited { color: #C4C4C4; }
-#sidebar #sb-2 a:hover, #sidebar #sb-2 a:active, #sidebar #sb-2 a:focus { color: #CCC; }
+#sidebar #sb-2 a:hover, #sidebar #sb-2 a:active, #sidebar #sb-2 a:focus { color: #ccc; }
 #sidebar .email { background: url(../img/ico-mail.gif) 0 4px no-repeat; padding: 0 0 0 1.8em; }
 #sidebar #rss li { background: url(../img/ico-rss.jpg) left center no-repeat; padding: 0; margin: .5em 0; }
 
 
-#footer { color: #828282; padding: 1em 0; font-size: 10px; text-align: center; }
+#footer { color: #878787; padding: 1em 0; font-size: 10px; text-align: center; }
 #footer p { margin: 0; }
 
 #footer a { text-decoration: none; }
 #footer a:link, #footer a:visited { color: #3A525C; font-weight: bold; }
-#footer a:hover, #footer a:active, #footer a:focus { color: #CCC; }
+#footer a:hover, #footer a:active, #footer a:focus { color: #ccc; }
 
 .footer-widget { margin-bottom: 1.5em; }
 
@@ -204,7 +204,7 @@ p.input-submit { text-align: right }
 #commentform textarea { font-size: 1em; font-family: Helvetica, Arial, sans-serif; width: 560px; }
 #commentform #submit-comment { width: auto; font-size: 14px; border: 0; padding: 5px; background: #3A525C; color: #fff; }
 #search-form #submit { padding: 1px 13px; margin: 0 0 0 5px; }
-#search h2, .emptysearch, .error { color: #CCC; }
+#search h2, .emptysearch, .error { color: #ccc; }
 
 
 
@@ -302,7 +302,7 @@ iframe {
 
 .related-thumb a:link,
 .related-thumb a:visited {
-	color: #CCC;
+	color: #ccc
 }
 
 .related-thumb a:hover { 
