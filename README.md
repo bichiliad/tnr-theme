@@ -5,6 +5,15 @@ A simple, single-column wordpress theme based off of Jared Erickson's [min theme
 
 ![Thuds and Rumbles](/img/thumbnail.png)
 
-[Demo](http://thudsandrumbles.com)
+Features
+-------
+
+* Works well on mobile devices, and is generally responsive.
+* Posts can set embeddable content in the post masthead (header). Simply add a
+  custom field to any post with the key "embed" and the url of an embeddable
+  page as the value. Note that this only works with sites that Wordpress
+  [currently supports](http://codex.wordpress.org/Embeds). 
+
+[See it live](http://thudsandrumbles.com)
 
 
