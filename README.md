@@ -3,7 +3,7 @@
 
 A simple, single-column wordpress theme based off of Jared Erickson's [min theme](http://jarederickson.com/2011/min-a-free-wordpress-minimal-theme/). 
 
-![Thuds and Rumbles]()
+![Thuds and Rumbles](/img/thumbnail.png)
 
 [Demo](http://thudsandrumbles.com)
 
