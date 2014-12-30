@@ -1,15 +1,10 @@
 # TnR-theme
 =========
 
-A simple, single-column wordpress theme based off of Jared Erickson's min theme. 
+A simple, single-column wordpress theme based off of Jared Erickson's [min theme](http://jarederickson.com/2011/min-a-free-wordpress-minimal-theme/). 
 
-![min theme](http://cdn.jarederickson.com/wp-content/uploads/2011/01/min-free-minimal-wordpress-theme-560x390.png)
+![Thuds and Rumbles]()
 
-[Download](http://jarederickson.com/2011/min-a-free-wordpress-minimal-theme/) | [Demo](http://lessmade.com/themes/min)
+[Demo](http://thudsandrumbles.com)
 
-## v1.2
-- Updated URL's to reflect new demo page
-- Removed PressTrends tracking
 
-## v1.1
-- Updated functions.php with Presstrendeds tracking
