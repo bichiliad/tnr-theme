@@ -24,18 +24,7 @@
 			<?php } ?>
 			<?php while (have_posts()) : the_post(); ?>
 				<div class="post" id="post-<?php the_ID(); ?>">
-					<div class="post-masthead">						
-						<?php 
-							$embed_url = get_post_meta( get_the_ID(), 'embed', true );
-							if ( $embed_url == '' ) {
-								?><a href="<?php the_permalink() ?>"><?php
-								the_post_thumbnail('full');
-								?></a><?php
-							} else {
-								echo wp_oembed_get( $embed_url, array('color'=>'cccccc', 'show_comments'=>'false', 'buying'=>'false', 'sharing'=>'false') );
-							}
-						 ?>
-					</div>
+					<?php echo get_post_masthead( get_the_ID() ); ?>
 					<div class="post-content">
 						<h2 class="mobile-header"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 						<span class="date mobile-header">

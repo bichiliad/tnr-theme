@@ -1,7 +1,48 @@
 <?php
 
-/* Thumbnails */
+/*
+ * HELPERS
+ */
 
+# Given a post ID, generates a masthead. First tries oembed, 
+#   then tries featured image. 
+function get_post_masthead( $post_id ) {
+
+	# Attempt to get oembed code
+	$embed_url = get_post_meta( $post_id, 'embed', true);
+	if ( $embed_url != '' ) {
+		$embed_code = wp_oembed_get( $embed_url, array(
+			'show_comments' => 'false',
+			'buying' 		=> 'false',
+			'sharing'		=> 'false'		
+		));
+
+		if ( $embed_code != false ) {
+			return '<div class="post-masthead">' . $embed_code . '</div>';
+		}
+	}
+
+	# No embed code or no url, better try post thumbnail
+	if( has_post_thumbnail( $post_id ) ) {
+		return  '<div class="post-masthead">'
+			. '<a href="'
+			. get_permalink( $post_id )
+			. '">'
+			. get_the_post_thumbnail( $post_id, 'full' )
+			. '</a>'
+			. '</div>';
+	}
+
+	# No thumbnail, no embed code, just return empty.
+	return '<div class="post-masthead"><!-- No masthead content  --></div>';
+}
+
+
+/* 
+ * CONFIGURATION 
+ */
+
+/* Thumbnails */
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 350, 350, true );
 
