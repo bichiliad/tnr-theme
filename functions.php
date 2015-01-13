@@ -1,5 +1,13 @@
 <?php
 
+function mytheme_customize_register( $wp_customize ) {
+	$wp_customize->add_setting( 'header_textcolor' , array(
+		'default'     => '#000000',
+		'transport'   => 'refresh',
+	) );
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
 /*
  * HELPERS
  */
@@ -11,6 +19,12 @@ function get_post_masthead( $post_id ) {
 	# Attempt to get oembed code
 	$embed_url = get_post_meta( $post_id, 'embed', true);
 	if ( $embed_url != '' ) {
+		
+		# Check for custom players
+		if ( strpos( $embed_url, 'soundcloud.com' ) !== false ) {
+			return custom_soundcloud_oembed($embed_url);
+		}
+
 		$embed_code = wp_oembed_get( $embed_url, array(
 			'show_comments' => 'false',
 			'buying' 		=> 'false',
@@ -37,6 +51,58 @@ function get_post_masthead( $post_id ) {
 	return '<div class="post-masthead"><!-- No masthead content  --></div>';
 }
 
+/*
+ * CUSTOM OEMBEDS
+ */
+
+function custom_soundcloud_oembed($url) {
+
+	$markup = ' 
+	<div class="plangular" plangular="'. $url . '">
+
+        <!-- The player -->
+        <div class="track-frame" ng-if="track"> 
+            <div class="play-pause">
+                <svg plangular-icon="play" ng-if="player.playing != track"></svg>
+                <svg plangular-icon="pause" ng-if="player.playing == track"></svg>
+            </div>
+            <img crossorigin class="artwork" ng-click="playPause()" ng-src="{{ track.artwork_url.replace(\'large\', \'t500x500\') }}"></img>
+
+            <div class="controls check">
+                <span class="play" ng-click="play()" ng-if="player.playing != track">
+                    <svg plangular-icon="play"></svg>
+                </span>
+                <span class="pause" ng-click="pause()" ng-if="player.playing == track">
+                    <svg plangular-icon="pause"></svg>
+                </span>
+                <!-- {{ track.user.username }} - {{ track.title }} -->
+            </div>
+            <progress class="check" value="{{ currentTime / duration || 0 }}" ng-click="seek($event)">
+                {{ currentTime / duration }}
+            </progress>
+            <div class="track-info">
+                <div class="track-username">{{ track.user.username }}</div>
+                <div class="track-title">{{ track.title }}</div>
+                <a ng-href="{{ track.permalink_url}}">Listen on Soundcloud</a>
+            </div>
+        </div>
+
+
+        <!-- Loading -->
+        <div class="loading" ng-if="!track">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div><!-- /.loading --> 
+
+    </div><!-- /.plangular --> 	
+	';
+	return $markup;
+}
 
 /* 
  * CONFIGURATION 
@@ -106,6 +172,7 @@ add_filter( 'jetpack_relatedposts_filter_post_context', '__return_empty_string' 
 
 /* Add a menu in the header */ 
 function register_menus() {
+	register_nav_menu('top-menu', __( 'Top Menu' ));
 	register_nav_menu('header-menu', __( 'Header Menu' ));
 }
 add_action( 'init', 'register_menus');

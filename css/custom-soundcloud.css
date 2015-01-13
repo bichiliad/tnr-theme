@@ -1,0 +1,327 @@
+
+/*********************
+ 
+ * General layout (scalable, keeps proportions)
+ * http://stackoverflow.com/a/13625843/444912
+
+ *********************/
+ 
+.track-frame,  
+.plangular {
+    width: 100%;            /* Player width */
+    padding-bottom: 75%;    /* Player height */
+    height: 0;
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.track-frame {
+    background-color: #fff;
+}
+
+.plangular {
+    overflow: hidden;
+}
+
+.artwork {
+
+    -webkit-transition: opacity 0.3s;
+       -moz-transition: opacity 0.3s;
+        -ms-transition: opacity 0.3s;
+         -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+
+    margin-top: -12.5%;
+    width: 100%;
+}
+
+.play-pause {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+
+
+    -webkit-transition: opacity 0.3s;
+       -moz-transition: opacity 0.3s;
+        -ms-transition: opacity 0.3s;
+         -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+    
+
+}
+
+.play-pause svg {
+    height: 28%;
+    margin: -14%;
+    padding: 45.5% 55%;
+    cursor: pointer;
+
+    -webkit-transition: height 0.3s, margin 0.3s;
+       -moz-transition: height 0.3s, margin 0.3s;
+        -ms-transition: height 0.3s, margin 0.3s;
+         -o-transition: height 0.3s, margin 0.3s;
+            transition: height 0.3s, margin 0.3s;
+}
+
+/*********************
+
+ * Hover animations
+
+ *********************/
+
+.track-frame:hover .artwork         { opacity: 0.2; }
+.track-frame:hover .play-pause      { opacity: 1; }
+.track-frame:hover .play-pause svg  { height: 24%; margin: -12%; }
+.track-frame:hover .controls        { opacity: 0; bottom: 40px;}
+.track-frame:hover progress         { opacity: 1; height: 20px; }
+.track-frame:hover .track-info      { opacity: 1; }
+
+
+/*********************
+
+ * Angular transitions
+
+ *********************/
+
+.track-frame.ng-enter,
+.track-frame.ng-leave,
+.loading.ng-enter,
+.loading.ng-leave {
+
+    -webkit-transition: opacity 0.5s;
+       -moz-transition: opacity 0.5s;
+        -ms-transition: opacity 0.5s;
+         -o-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+}
+
+.track-frame.ng-enter {
+    transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+}
+
+.track-frame.ng-enter,
+.track-frame.ng-leave.ng-leave-active,
+.loading.ng-enter,
+.loading.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.track-frame.ng-leave,
+.track-frame.ng-enter.ng-enter-active,
+.loading.ng-leave,
+.loading.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+/*********************
+
+ * Control Styling
+
+ *********************/
+
+.controls {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    padding: 0 30px;
+
+    -webkit-transition: opacity 0.3s, bottom 0.3s;
+       -moz-transition: opacity 0.3s, bottom 0.3s;
+        -ms-transition: opacity 0.3s, bottom 0.3s;
+         -o-transition: opacity 0.3s, bottom 0.3s;
+            transition: opacity 0.3s, bottom 0.3s;
+}
+
+.controls .play, 
+.controls .pause {
+    width: 7%;
+    display: inline-block;
+
+    -webkit-transition: color 0.3s;
+       -moz-transition: color 0.3s;
+        -ms-transition: color 0.3s;
+         -o-transition: color 0.3s;
+            transition: color 0.3s;
+ }
+
+ .controls.background--dark .play, 
+ .controls.background--dark .pause {
+    color: white;
+ }
+
+ /*********************
+
+ * Track Info
+
+ *********************/
+
+.track-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 300;
+	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
+	text-align: center;
+    box-sizing: border-box;
+    padding: 30px;
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s;
+       -moz-transition: opacity 0.3s;
+        -ms-transition: opacity 0.3s;
+         -o-transition: opacity 0.3s;
+            transition: opacity 0.3s;
+}
+
+.track-info .track-title {
+    font-size: 1.6em;
+    margin-bottom: .5em;
+}
+
+.track-info .track-username {
+    font-size: 1em;
+    margin-bottom: .2em;
+
+}
+
+.track-info a {
+    text-transform: uppercase;
+    font-size: .7em;
+    bottom: 30px;
+    right: 30px;
+}
+
+.track-info a,
+.track-info a:visited,
+.track-info a:active {
+    color: black;
+}
+
+.track-info a:hover {
+    color: #333;
+}
+
+
+/*********************
+
+ * Progress Styling
+ * http://www.useragentman.com/blog/2012/01/03/cross-browser-html5-progress-bars-in-depth/
+
+ *********************/
+
+
+.track-frame progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+}
+
+/* Loading bar */
+/* These have to be separate because of firefox and opera :( */
+.track-frame progress {
+    color: black;
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+.track-frame progress::-moz-progress-bar { 
+    background: black;  
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+.track-frame progress::-webkit-progress-value {
+    background: black;
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+.track-frame progress[aria-valuenow]:before  {
+    background: black;
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+/* Loading bar for dark background images */
+.track-frame progress.background--dark::-moz-progress-bar { 
+    background: white;  
+}
+
+.track-frame progress.background--dark::-webkit-progress-value {
+    background: white;
+}
+
+.track-frame progress.background--dark[aria-valuenow]:before  {
+    background: white;
+}
+
+/* Loading bar background */
+.track-frame progress,                          
+.track-frame progress[role][aria-valuenow] {
+   background: rgba(0, 0, 0, 0.5) !important; /* !important is needed by the polyfill */
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+.track-frame progress::-webkit-progress-bar {
+    background: rgba(0, 0, 0, 0.5);
+
+    -webkit-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+       -moz-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+        -ms-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+         -o-transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+            transition: opacity 0.3s, height 0.3s, background 0.3s, color 0.3s;
+}
+
+/* Loading bar background for dark background images */
+
+.track-frame progress.background--dark, 
+.track-frame progress.background--dark[role][aria-valuenow] {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.track-frame progress.background--dark::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/*********************
+
+ * Stuff for smaller screens
+
+ *********************/
+
+
