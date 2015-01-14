@@ -30,7 +30,7 @@
     overflow: hidden;
 }
 
-.artwork {
+.track-frame img.artwork {
 
     -webkit-transition: opacity 0.3s;
        -moz-transition: opacity 0.3s;
@@ -40,6 +40,7 @@
 
     margin-top: -12.5%;
     width: 100%;
+	display: inline;
 }
 
 .play-pause {
@@ -47,22 +48,17 @@
     position: absolute;
     height: 100%;
     width: 100%;
-
-
-
     -webkit-transition: opacity 0.3s;
        -moz-transition: opacity 0.3s;
         -ms-transition: opacity 0.3s;
          -o-transition: opacity 0.3s;
             transition: opacity 0.3s;
-    
-
 }
 
 .play-pause svg {
     height: 28%;
     margin: -14%;
-    padding: 45.5% 55%;
+    padding: 45.5% 53%;
     cursor: pointer;
 
     -webkit-transition: height 0.3s, margin 0.3s;
@@ -173,6 +169,7 @@
     font-weight: 300;
 	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
 	text-align: center;
+	width: 100%;
     box-sizing: border-box;
     padding: 30px;
     opacity: 0;
@@ -197,7 +194,9 @@
 
 .track-info a {
     text-transform: uppercase;
-    font-size: .7em;
+    font-size: 12px;
+	text-decoration: none;
+	border-bottom: 1px solid #000;
     bottom: 30px;
     right: 30px;
 }

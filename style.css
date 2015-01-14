@@ -19,7 +19,7 @@ Author URI: http://www.thudsandrumbles.com/
 *********************************************/
 
 p {
-	margin: 2em 0;
+	margin: 1em 0;
 	line-height: 1.7em;
 	font-size: 1.1em;
 }
@@ -41,16 +41,10 @@ h2 { font-size: 32px; }
 	color: #999;
 }
 
-h1 { font-size: 25px; font-weight: normal; }
-a.back { text-decoration: underline; }
-
 #search h2, #comments h3, #commentform h3, .emptysearch, .error {
 	font-size: 18px;
 	font-weight: normal;
 }
-
-.back:link, .back:visited { color: #f60; }
-.back:hover, .back:active, .back:focus { color: #3A525C; }
 
 
 /********************************************
@@ -83,50 +77,77 @@ body {
 
 .menu li a:link,
 .menu li a:visited,
-.menu li a {
+.menu li a,
+.post .date a,
+.post .post-footer a {
 	color: #999;
+	text-decoration: none;
 	-webkit-transition: color 0.3s;
 			transition: color 0.3s;
+}
+
+.entry a {
+	color: #272727;
+	border-bottom: 1px solid;
+	text-decoration: none;
+	-webkit-transition: color 0.3s;
+			transition: color 0.3s;
+}
+
+.entry a:hover {
+	color: #f17f81;
+}
+
+.menu li a:hover,
+.post .date a:hover,
+.post .post-footer a:hover,
+#site-title a:hover,
+.post .date a:hover {
+	color: #f17f81;
+	border-bottom: 1px solid; 
 }
 
 #header-menu a {
 	font-size: 15px;
 }
 
-#header-menu a:hover {
-	color: #000;
-	border-bottom: 1px solid;
-}
 
 #taglist { 
 	text-align: center;
 }
 
-#taglist li a {
-	text-decoration: none;
-}
-
-#taglist li a:hover {
-	color: #000;
-	border-bottom: 1px solid;
-}
 
 #wrapper { font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 15px; margin: 0 auto; padding: 0 2em; width: 560px; }
 
 #header { margin: 0 0 -1em 0; padding: 4em 0 0 0; position: relative; text-align: center; }
 #header .description { font-size: 13px; }
 #header a { text-decoration: none; }
-#header h1 a:link, #header h1 a:visited { color: #000; }
-#header a:hover, #header a:active, #header a:focus { color: #000; }
+#header a:hover, #header a:active, #header a:focus { color: #272727; }
 
-#header .description { margin: 1.5em 0 0 0 }
+#header .description {
+	margin: 1.5em 0 0 0
+}
 
-#logo { width: 260px; margin: 0 auto; position: relative; display: block; transition: opacity .5s; -webkit-transition: opacity .5s; }
-#logo:hover { opacity: .5; filter:alpha(opacity=50); }
+#logo {
+	width: 260px;
+	margin: 0 auto;
+	position: relative;
+	display: block;
+}
+
 #site-title {
-	font-size: 45px;
 	font-weight: bolder;
 	margin-bottom: 30px;
+}
+
+#site-title a{
+	color: #272727;	
+	-webkit-transition: color 0.3s;
+			transition: color 0.3s;
+}
+
+#site-title:hover a {
+	color: #f17f81;
 }
 
 .post { 
@@ -145,19 +166,34 @@ body {
 .post .number-of-comments a:link, .post .number-of-comments a:visited { color: #999; }
 .post .number-of-comments a:hover, .post .number-of-comments a:active, .post .number-of-comments a:focus { color: #999; }
 .post .vvqbox { margin: 2em auto; }
-.post .date { color: #999; font-size: 12px; display: block; margin-top: 1em; }
-.post .date a, .post .date a:link, .post .date a:visited { color: #999; }
-.post .date a:hover { color: #666; }
-.post .post-footer { overflow: hidden; }
+
+.post .date {
+	color: #999;
+	font-size: 15px;
+	margin: 15px 0 30px;
+	text-transform: uppercase;
+	font-family: "futura-pt" "Futura", "Trebuchet MS", "Arial", sans-serif;
+}
+
+.post .date a, .post .date a:link, .post .date a:visited { color: #999; text-decoration: none; }
+.post .post-footer {
+	text-align: center;
+	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
+	color: #999;
+	margin-top: 15px;
+	size: 15px;
+	text-transform: uppercase;
+}
 
 .post h2 a { text-decoration: none; }
 .post h2 a:link, .post h2 a:visited {
-	color: #000;
-	font-weight: bolder;
+	color: #272727;
+	-webkit-transition: color 0.3s;
+			transition: color 0.3s;
 }
 
-.post h2 a:hover, .post h2 a:active, .post h2 a:focus { color: #3A525C; }
-.post h2 { font-size: 32px; line-height: 120%; font-weight: normal; }
+.post h2 a:hover, .post h2 a:active, .post h2 a:focus { color: #f17f81; }
+.post h2 { font-size: 32px; line-height: 120%; font-weight: bolder; }
 .post h3 { color: #ccc; margin: 0 0 1em 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; line-height: 120%; }
 .post h4 { color: #ccc; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
 .post h5 { color: #ccc;  font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
@@ -169,10 +205,9 @@ body {
 .post blockquote { color: #fff; background: #878787; margin: 2em; padding: .1em 1.5em; position: relative; }
 .post blockquote cite { display: block; text-align: right; }
 
-.entry a:link, .comment a:link { color: #999; text-decoration: underline; }
+/*.entry a:link, .comment a:link { color: #999; }
 .entry a:visited, .comment a:visited { color: #999; }
-.entry a:hover, .entry a:active, .entry a:focus, .comment a:hover, .comment a:active, .comment a:focus { color: #3A525C; }
-.entry .more-link { font-size: 12px; }
+.entry a:hover, .entry a:active, .entry a:focus, .comment a:hover, .comment a:active, .comment a:focus { color: #3A525C; }*/
 
 .entry ul { list-style: none inside; padding: 0 1em; }
 .entry ol { list-style: decimal outside; padding: 0 2.5em; }
