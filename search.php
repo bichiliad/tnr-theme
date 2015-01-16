@@ -10,11 +10,11 @@
 					<?php echo get_post_masthead( get_the_ID() ); ?>
 					<div class="post-content">
 						<h2 class="mobile-header"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-						<span class="date mobile-header">
-							by <?php the_author_posts_link(); ?>
-							on <a href="<?php the_permalink() ?>"><?php the_time(__('m/j/Y','min')) ?></a>
-							in <?php the_category(', ') ?>
-						</span>
+						<div class="date mobile-header">
+							posted by <?php the_author_posts_link(); ?>
+							<a href="<?php the_permalink() ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></a>
+							in <?php the_category(', ') ?> <br> 
+						</div>
 						<div class="clearfix"></div>
 						<div class="post-footer">
 							<div class="entry">

@@ -27,22 +27,25 @@
 					<?php echo get_post_masthead( get_the_ID() ); ?>
 					<div class="post-content">
 						<h2 class="mobile-header"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-						<span class="date mobile-header">
-							by <?php the_author_posts_link(); ?>
-							on <a href="<?php the_permalink() ?>"><?php the_time(__('m/j/Y','min')) ?></a>
-							in <?php the_category(', ') ?>
-						</span>
-						<div class="clearfix"></div>
-						<div class="post-footer">
-							<div class="entry">
-								<?php the_content(__('Continue Reading','min').' &raquo;'); ?>
+						
+						<?php if ( !is_page() ) { ?>
+							<div class="date mobile-header">
+								posted by <?php the_author_posts_link(); ?>
+								<a href="<?php the_permalink() ?>"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></a>
+								in <?php the_category(', ') ?> <br> 
 							</div>
-							<span class="number-of-comments">
-								<a href="<?php the_permalink() ?>#comments" title="title">
-									<?php comments_number(__('No Comments','min'), __('1 Comment','min'), __('% Comments','min'));?>
-								</a>
-							</span>
+						<?php } ?>
+
+						<div class="entry">
+							<?php the_content( __('Continue reading','min') . ' &raquo;' ); ?>
 						</div>
+
+						<div class="clearfix"></div>
+
+						<div class="post-footer">
+							<?php the_tags('', '  /  ', '') ?>
+						</div><!-- /.post-footer -->
+
 					</div><!-- /.post-content -->
 				</div><!-- /.post -->
 			<?php endwhile; ?>

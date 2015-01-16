@@ -101,7 +101,6 @@ body {
 .menu li a:hover,
 .post .date a:hover,
 .post .post-footer a:hover,
-#site-title a:hover,
 .post .date a:hover {
 	color: #f17f81;
 	border-bottom: 1px solid; 
@@ -122,7 +121,6 @@ body {
 #header { margin: 0 0 -1em 0; padding: 4em 0 0 0; position: relative; text-align: center; }
 #header .description { font-size: 13px; }
 #header a { text-decoration: none; }
-#header a:hover, #header a:active, #header a:focus { color: #272727; }
 
 #header .description {
 	margin: 1.5em 0 0 0
@@ -146,7 +144,7 @@ body {
 			transition: color 0.3s;
 }
 
-#site-title:hover a {
+#site-title a:hover {
 	color: #f17f81;
 }
 
@@ -172,10 +170,9 @@ body {
 	font-size: 15px;
 	margin: 15px 0 30px;
 	text-transform: uppercase;
-	font-family: "futura-pt" "Futura", "Trebuchet MS", "Arial", sans-serif;
+	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
 }
 
-.post .date a, .post .date a:link, .post .date a:visited { color: #999; text-decoration: none; }
 .post .post-footer {
 	text-align: center;
 	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
@@ -194,9 +191,12 @@ body {
 
 .post h2 a:hover, .post h2 a:active, .post h2 a:focus { color: #f17f81; }
 .post h2 { font-size: 32px; line-height: 120%; font-weight: bolder; }
-.post h3 { color: #ccc; margin: 0 0 1em 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; line-height: 120%; }
+.post h3 { color: #ccc; margin: 0 0 1em 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; line-height: 120%; }
 .post h4 { color: #ccc; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
-.post h5 { color: #ccc;  font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
+.post h5 { color: #ccc;  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
+.post p {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 .post blockquote cite { font-style: normal; }
 .post .number-of-comments a { text-decoration: underline; font-size: 13px; }
 #comments { font-size: 13px; }
@@ -271,7 +271,7 @@ label { font-size: 1em; margin: 0 .5em; }
 #search-form label { position: absolute; top: -99999px; }
 p.input-submit { text-align: right }
 #commentform input { width: 43% }
-#commentform textarea { font-size: 1em; font-family: Helvetica, Arial, sans-serif; width: 560px; }
+#commentform textarea { font-size: 1em; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; width: 560px; }
 #commentform #submit-comment { width: auto; font-size: 14px; border: 0; padding: 5px; background: #3A525C; color: #fff; }
 #search-form #submit { padding: 1px 13px; margin: 0 0 0 5px; }
 #search h2, .emptysearch, .error { color: #ccc; }

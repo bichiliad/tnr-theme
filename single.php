@@ -10,11 +10,11 @@
 					<h2 class="mobile-header"><?php the_title(); ?></h2>
 
 					<?php if ( !is_page() ) { ?>
-						<span class="date mobile-header">
-						  by <?php the_author_posts_link(); ?>
-						  on <a href="<?php the_permalink() ?>"><?php the_time(__('m/j/Y','min')) ?></a>
-						  in <?php the_category(', ') ?>
-						</span>
+						<div class="date mobile-header">
+							by <?php the_author_posts_link(); ?>
+							on <a href="<?php the_permalink() ?>"><?php the_time(__('m/j/Y','min')) ?></a>
+							in <?php the_category(', ') ?>
+						</div>
 					<?php } ?>
 					<div class="entry">
 						<?php the_content(__('Read the rest of this post','min').' &raquo;'); ?>
