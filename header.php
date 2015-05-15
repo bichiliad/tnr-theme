@@ -23,10 +23,15 @@
     <script src="<?php bloginfo('template_url'); ?>/js/background-check.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.8/angular-animate.min.js"></script>
-    <script src="//d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script>
+    <!--script src="//d2v52k3cl9vedd.cloudfront.net/plangular/2.0-beta-1/ng-plangular.min.js"></script-->
+	<script src="//d2v52k3cl9vedd.cloudfront.net/plangular/3.0.1/plangular.min.js"></script>
+
 
     <script>
-        var app = angular.module('customPlayer', ['ngAnimate', 'plangular']);
+		var app = angular.module('customPlayer', ['ngAnimate', 'plangular'])
+			.config(function(plangularConfigProvider){
+				plangularConfigProvider.clientId = '7ca378d079833bfa5d22feaebd90ce4b';
+			});
 
         window.onload = function() {
             BackgroundCheck.init({

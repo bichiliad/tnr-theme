@@ -19,9 +19,9 @@ Author URI: http://www.thudsandrumbles.com/
 *********************************************/
 
 p {
-	margin: 1em 0;
+	margin: 2em 0;
 	line-height: 1.7em;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 h1,
@@ -46,6 +46,13 @@ h2 { font-size: 32px; }
 	font-weight: normal;
 }
 
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
 
 /********************************************
 
@@ -191,11 +198,11 @@ body {
 
 .post h2 a:hover, .post h2 a:active, .post h2 a:focus { color: #f17f81; }
 .post h2 { font-size: 32px; line-height: 120%; font-weight: bolder; }
-.post h3 { color: #ccc; margin: 0 0 1em 0; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: normal; line-height: 120%; }
-.post h4 { color: #ccc; font-family: Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
-.post h5 { color: #ccc;  font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
+.post h3 { color: #ccc; margin: 0 0 1em 0; font-size: 18px; font-weight: normal; line-height: 120%; }
+.post h4 { color: #ccc; font-size: 13px; font-weight: normal; line-height: 120%; margin: 2em 0 1em 0; }
+.post h5 { color: #ccc; font-size: 13px; font-weight: normal; line-height: 120%;  margin: 2em 0 1em 0; }
 .post p {
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-family: "futura-pt", "Futura", "Trebuchet MS", "Arial", sans-serif;
 }
 .post blockquote cite { font-style: normal; }
 .post .number-of-comments a { text-decoration: underline; font-size: 13px; }

@@ -21,7 +21,7 @@ function get_post_masthead( $post_id ) {
 	if ( $embed_url != '' ) {
 		
 		# Check for custom players
-		if ( strpos( $embed_url, 'soundcloud.com' ) !== false ) {
+		if ( strpos( $embed_url, 'soundcloud.com' ) !== false && strpos( $embed_url, '/sets/' ) == false ) {
 			return custom_soundcloud_oembed($embed_url);
 		}
 
